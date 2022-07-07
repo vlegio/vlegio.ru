@@ -1,0 +1,234 @@
+baseURL: "https://vlegio.ru"
+theme: "papermod"
+title: "Ivan Anfilatov aka VLegio"
+copyright: "Ivan (VLegio) Anfilatov / Commit: @@@COMMIT@@@"
+languageCode: "ru-RU"
+defaultContentLanguage: "ru"
+enableEmoji: true
+enablegitinfo: true
+forcesyncstatic: true
+paginate: 10
+canonifyURLs: true
+summaryLength: 15
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# googleAnalytics: UA-176073511-1
+#googleAnalytics: G-NK4TC343YF
+
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: true
+  tdewolff:
+    css:
+      decimals: -1
+      keepCSS2: true
+    html:
+      keepConditionalComments: true
+      keepDefaultAttrVals: true
+      keepDocumentTags: true
+      keepEndTags: true
+      keepQuotes: false
+      keepWhitespace: false
+    js:
+    json:
+    svg:
+      decimals: -1
+    xml:
+      keepWhitespace: false
+pluralizeListTitles: true
+params:
+  env: production
+  comments: false
+  ShowPostNavLinks: true
+  description: "Записи легиона. IT и не только"
+  editPost:
+    URL: "https://github.com/t0pep0/vlegio.ru/blob/master/content"
+    Text: "Edit..." # edit text
+    appendFilePath: true # to aepend file path to Edit link
+  label:
+      icon: /logo-new.png
+  assets:
+    favicon: /favicon.ico
+    disableFingerprinting: true
+
+  opengraph: true
+  twitter_cards: false
+  copyright: "Ivan (vlegio) Anfilatov"
+  mainSections:  ["post"]
+  dateFormat: "2006-01-02 15:04"
+  related: true
+  relatedMax: 5
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  disableSpecial1stPost: true
+  homeInfoParams:
+    Title: "Привет, `%username%`!"
+    Content: |
+      Меня зовут Иван и добро пожаловать на бложек имени меня.
+      Подписывайся на [telegram-канал](https://t.me/pero_legiona) или заходи в [telegram-чат](https://t.me/pero_legiona_chat) и задавай вопросы. 
+
+  socialIcons:
+    - name: telegram
+      url: 'https://ttttt.me/pero_legiona_chat'
+    - name: github
+      url: 'https://github.com/t0pep0'
+    # - name: gitlab
+    #   url: 'https://gitlab.com/t0pep0'
+    - name: rss
+      url: '/index.xml'
+
+
+
+  analytics:
+    #    google:
+    #  SiteVerificationTag: "7XYgVY2xnjODEkc6HA_dLMdLSQDNEQ3v5bG40MpnB0U"
+    #yandex:
+    #  SiteVerificationTag: "766a09b06b27e0f2"
+
+  entry:
+    meta: ["date", "tags", "author"]
+    toc: false
+    tocOpen: false
+
+  featured:
+    previewOnly: true
+
+  outputs:
+    home: [ "HTML", "RSS", "JSON" ]
+    section: [ "HTML", "RSS"]
+
+  outputFormats:
+    RSS:
+      mediaType: "application/rss+xml"
+      baseName: "manifest"
+      isPlainText: true
+      notAlternative: true
+
+  taxonomies:
+    category: "categories"
+    tag: "tags"
+
+  permalinks:
+    post: "/:slug/"
+
+menu:
+  main:
+    - name: "Telegram"
+      url: "https://tt.me/pero_legiona"
+      weight: 1
+
+frontmatter:
+  date: ["date", "publishDate", "lastmod"]
+  lastmod: [":git", "lastmod", "date", "publishDate"]
+  publishDate: ["publishDate", "date"]
+  expiryDate: ["expiryDate"]
+
+
+markup:
+  asciidocExt:
+    attributes: {}
+    backend: html5
+    extensions: []
+    failureLevel: fatal
+    noHeaderOrFooter: true
+    preserveTOC: false
+    safeMode: unsafe
+    sectionNumbers: false
+    trace: false
+    verbose: false
+    workingFolderCurrent: false
+  blackFriday:
+    angledQuotes: false
+    extensions: null
+    extensionsMask: null
+    footnoteAnchorPrefix: ""
+    footnoteReturnLinkContents: ""
+    fractions: true
+    hrefTargetBlank: false
+    latexDashes: true
+    nofollowLinks: false
+    noreferrerLinks: false
+    plainIDAnchors: true
+    skipHTML: false
+    smartDashes: true
+    smartypants: true
+    smartypantsQuotesNBSP: false
+    taskLists: true
+  defaultMarkdownHandler: goldmark
+
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+    renderer:
+      hardWraps: false
+      unsafe: false
+      xhtml: false
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: onedark
+    tabWidth: 4
+
+caches:
+  assets:
+    dir: ":resourceDir/_gen"
+    maxAge: -1
+  getcsv:
+    dir: ":cacheDir/:project"
+    maxAge: -1
+  getjson:
+    dir: ":cacheDir/:project"
+    maxAge: -1
+  images:
+    dir: ":resourceDir/_gen"
+    maxAge: -1
+  modules:
+    dir: ":cacheDir/modules"
+    maxAge: -1
+
+module:
+  mounts:
+  - source: content
+    target: content
+  - source: static
+    target: static
+  - source: layouts
+    target: layouts
+  - source: data
+    target: data
+  - source: assets
+    target: assets
+  - source: i18n
+    target: i18n
+  - source: archetypes
+    target: archetypes
+

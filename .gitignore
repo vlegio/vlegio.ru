@@ -1,0 +1,21 @@
+*~
+.DS_Store
+venv/
+env/
+.idea/
+__pycache__/
+.env
+.vscode/
+# content/
+# jekyll/
+# resources/
+# static/syntax.css
+_draft/
+jekyll/
+draft/
+public/
+resources/
+rundev.sh
+draft-config.yml
+.hugo_build.lock
+

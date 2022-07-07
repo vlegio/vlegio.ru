@@ -1,0 +1,57 @@
+---
+name: CI
+'on':
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  deploy-website:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Do a git checkout including submodules
+        uses: actions/checkout@master
+        with:
+          submodules: true
+
+      - name: Generate and deploy website
+        uses: jtprogru/hugo-rsync-deployment@master
+        env:
+          VPS_DEPLOY_KEY: ${{secrets.DEPLOY_SSH_KEY}}
+          VPS_DEPLOY_USER: ${{secrets.DEPLOY_USER}}
+          VPS_DEPLOY_HOST: ${{secrets.DEPLOY_HOST}}
+          VPS_DEPLOY_DEST: ${{secrets.DEPLOY_TARGET_PATH}}
+        with:
+          hugo-arguments: '--minify'
+          rsync-arguments: '-avz --delete --progress'
+
+      - name: Telegram Notify OK
+        if: ${{ success() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_USER_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          disable_web_page_preview: true
+          message: |
+            **Deploy status**: ✅
+            **Project**: `${{github.repository}}`
+            **Runs on**: https://github.com/${{github.repository}}/tree/${{github.sha}}
+            **Branch**: `${{github.ref}}`
+
+      - name: Telegram Notify NOK
+        if: ${{ failure() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_USER_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          disable_web_page_preview: true
+          message: |
+            **Deploy status**: ❌
+            **Project**: `${{github.repository}}`
+            **Runs on**: https://github.com/${{github.repository}}/tree/${{github.sha}}
+            **Branch**: `${{github.ref}}`
+########
+# END OF FILE
+########

@@ -81,7 +81,7 @@ params:
 
   socialIcons:
     - name: telegram
-      url: 'https://ttttt.me/pero_legiona_chat'
+      url: 'https://t.me/pero_legiona_chat'
     - name: github
       url: 'https://github.com/t0pep0'
     # - name: gitlab
@@ -126,7 +126,7 @@ params:
 menu:
   main:
     - name: "Telegram"
-      url: "https://tt.me/pero_legiona"
+      url: "https://t.me/pero_legiona"
       weight: 1
 
 frontmatter:

@@ -51,7 +51,7 @@ params:
   ShowPostNavLinks: true
   description: "Записи легиона. IT и не только"
   editPost:
-    URL: "https://github.com/t0pep0/vlegio.ru/blob/master/content"
+    URL: "https://github.com/vlegio/vlegio.ru/blob/master/content"
     Text: "Edit..." # edit text
     appendFilePath: true # to aepend file path to Edit link
   label:
@@ -83,9 +83,7 @@ params:
     - name: telegram
       url: 'https://t.me/pero_legiona_chat'
     - name: github
-      url: 'https://github.com/t0pep0'
-    # - name: gitlab
-    #   url: 'https://gitlab.com/t0pep0'
+      url: 'https://github.com/vlegio'
     - name: rss
       url: '/index.xml'
 

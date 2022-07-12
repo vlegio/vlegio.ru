@@ -10,7 +10,7 @@ author: "VLegio"
 description: ""
 showToc: false
 TocOpen: false
-draft: true
+draft: false
 hidemeta: false
 disableShare: false
 # cover:

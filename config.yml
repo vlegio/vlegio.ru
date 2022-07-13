@@ -1,5 +1,5 @@
 baseURL: "https://vlegio.ru"
-theme: "papermod"
+theme: "simple-style"
 title: "Ivan Anfilatov aka VLegio"
 copyright: "Ivan (VLegio) Anfilatov / Commit: @@@COMMIT@@@"
 languageCode: "ru-RU"
@@ -125,6 +125,15 @@ menu:
   main:
     - name: "Telegram"
       url: "https://t.me/pero_legiona"
+      weight: 4
+    - name: "About"
+      url: "/about/"
+      weight: 3
+    - name: "Tags"
+      url: "/tags/"
+      weight: 2
+    - name: "Categories"
+      url: "/categories/"
       weight: 1
 
 frontmatter:

@@ -8,7 +8,7 @@ author: "VLegio"
 description: ""
 showToc: false
 TocOpen: false
-draft: true
+draft: false
 hidemeta: false
 disableShare: false
 # cover:
@@ -24,5 +24,7 @@ comments: false
 
 На Go я пишу с 2013 года и это мой основной язык, так-что большинство статей будет как раз про него.
 
+
+[GitHub](https://github.com/vlegio)
 
 ---

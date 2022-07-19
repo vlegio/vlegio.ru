@@ -1,0 +1,5 @@
+~version: "1.0"
+?exists: //article
+title:   //article//h1
+body:     //article
+@remove: $body//div[has-class("tag")]

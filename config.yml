@@ -77,11 +77,11 @@ params:
     Title: "Привет, `%username%`!"
     Content: |
       Меня зовут Иван и добро пожаловать на бложек имени меня.
-      Подписывайся на [telegram-канал](https://t.me/pero_legiona) или заходи в [telegram-чат](https://t.me/pero_legiona_chat) и задавай вопросы. 
+      Подписывайся на [telegram-канал](https://t.me/cursor_legiona) или заходи в [telegram-чат](https://t.me/cursor_legiona_chat) и задавай вопросы. 
 
   socialIcons:
     - name: telegram
-      url: 'https://t.me/pero_legiona_chat'
+      url: 'https://t.me/cursor_legiona_chat'
     - name: github
       url: 'https://github.com/vlegio'
     - name: rss
@@ -124,7 +124,7 @@ params:
 menu:
   main:
     - name: "Telegram"
-      url: "https://t.me/pero_legiona"
+      url: "https://t.me/cursor_legiona"
       weight: 4
     - name: "About"
       url: "/about/"

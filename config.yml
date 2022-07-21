@@ -91,6 +91,7 @@ params:
     #  SiteVerificationTag: "7XYgVY2xnjODEkc6HA_dLMdLSQDNEQ3v5bG40MpnB0U"
     yandex:
       SiteVerificationTag: "aaee325eef256b68"
+      MetrikaID: 89637978
 
   entry:
     meta: ["date", "tags", "author"]

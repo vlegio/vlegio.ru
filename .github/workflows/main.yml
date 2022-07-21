@@ -10,7 +10,7 @@ jobs:
       - name: Do a git checkout including submodules
         uses: actions/checkout@master
         with:
-          submodules: true
+          submodules: false
 
       - name: Generate and deploy website
         uses: jtprogru/hugo-rsync-deployment@master

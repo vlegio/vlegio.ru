@@ -1,0 +1,15 @@
+{{ if isset site.Params "search" -}}
+<div class="search">
+  {{ if eq site.Params.Search "baidu" -}}
+    {{ partial "search-form.html" (dict "url" "https://www.baidu.com/s" "key" "wd") -}}
+  {{ else if eq site.Params.Search "google" -}}
+    {{ partial "search-form.html" (dict "url" "https://www.google.com/search" "key" "q") -}}
+  {{ else if eq site.Params.Search "bing" -}}
+    {{ partial "search-form.html" (dict "url" "https://www.bing.com/search" "key" "q") -}}
+  {{ else if eq site.Params.Search "duckduckgo" -}}
+    {{ partial "search-form.html" (dict "url" "https://www.duckduckgo.com/" "key" "q") -}}
+  {{ else -}}
+    {{ errorf "Unknown 'Site.Params.Search' value '%s'! Only 'baidu' is supported now." site.Params.Search -}}
+  {{ end -}}
+</div>
+{{ end -}}

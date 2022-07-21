@@ -1,0 +1,41 @@
+{{ define "main" -}}
+<article>
+  <div class="title">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.Subtitle -}}
+    <h2>{{ . }}</h2>
+    {{ end -}}
+  </div>
+  {{ if .Date -}}
+  <div class="meta">{{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02 15:04") }}</div>
+  {{ end -}}
+  {{ $taxo := "tags" -}}
+  {{ if .Param $taxo -}}
+  <div class="meta">
+    {{ $data := newScratch }}
+    {{ range .Param $taxo -}}
+    {{ $name := . -}}
+    {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | anchorize)) }}
+    {{ $data.Set "url" .Permalink }}
+    {{ end }}
+    {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+    {{ $data.Set "url" .Permalink }}
+    {{ end }}
+    <div class="tag"><a href="{{ $data.Get "url" }}">#{{ $name }}</a></div>
+    {{ end -}}
+  </div>
+  {{ end -}}
+  <div class="artical-body">
+  {{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
+    {{ .TableOfContents }}
+    <div class="content-with-toc">
+      {{ .Content -}}
+    </div>
+  {{ else }}
+    <div class="content">
+      {{ .Content -}}
+    </div>
+  {{ end }}
+  </div>
+</article>
+{{ end -}}

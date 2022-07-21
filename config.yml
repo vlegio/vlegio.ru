@@ -1,4 +1,3 @@
-baseURL: "https://vlegio.ru"
 theme: "simple-style"
 title: "Ivan Anfilatov aka VLegio"
 copyright: "Ivan (VLegio) Anfilatov / Commit: @@@COMMIT@@@"
@@ -16,8 +15,6 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-# googleAnalytics: UA-176073511-1
-#googleAnalytics: G-NK4TC343YF
 
 minify:
   disableCSS: false
@@ -92,8 +89,8 @@ params:
   analytics:
     #    google:
     #  SiteVerificationTag: "7XYgVY2xnjODEkc6HA_dLMdLSQDNEQ3v5bG40MpnB0U"
-    #yandex:
-    #  SiteVerificationTag: "766a09b06b27e0f2"
+    yandex:
+      SiteVerificationTag: "aaee325eef256b68"
 
   entry:
     meta: ["date", "tags", "author"]

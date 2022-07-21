@@ -1,7 +1,0 @@
-[submodule "themes/papermod"]
-	path = themes/papermod
-	url = https://github.com/adityatelange/hugo-PaperMod.git
-	branch = master
-[submodule "themes/simple-style"]
-	path = themes/simple-style
-	url = git@github.com:yanlinlin82/simple-style.git

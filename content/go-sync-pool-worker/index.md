@@ -13,11 +13,11 @@ TocOpen: false
 draft: false
 hidemeta: false
 disableShare: false
-# cover:
-#     image: "<image path/url>"
+cover:
+  image: "pict.png"
+  relative: true
 #     alt: "<alt text>"
 #     caption: "<text>"
-#     relative: false
 comments: false
 ---
 

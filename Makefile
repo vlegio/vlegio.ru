@@ -1,6 +1,6 @@
 #!make
 
-name="00000000-init"
+name?="00000000-init"
 host="0.0.0.0"
 port="1313"
 config="config.yml"

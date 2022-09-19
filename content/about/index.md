@@ -26,4 +26,8 @@ comments: false
 
 
 [GitHub](https://github.com/vlegio)
+
+Так-же списки для себя, что бы не потерять:
+[Магазины](/magazines/)
+
 ---

@@ -13,7 +13,7 @@ jobs:
           submodules: false
 
       - name: Generate and deploy website
-        uses: jtprogru/hugo-rsync-deployment@master
+        uses: vlegio/hugo-rsync-deployment@v0.0.1
         env:
           VPS_DEPLOY_KEY: ${{secrets.DEPLOY_SSH_KEY}}
           VPS_DEPLOY_USER: ${{secrets.DEPLOY_USER}}

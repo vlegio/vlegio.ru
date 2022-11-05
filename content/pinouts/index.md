@@ -29,6 +29,9 @@ comments: false
 
 ![orangepi pinout](/pinouts/orangepi.jpg)
 
+**PG07, PG-06 is UART2 RX/TX**
+
+
 # TriGorilla V0.0.2
 ![trigorilla v0.0.2](/pinouts/trigorilla-v0.0.2.png)
 

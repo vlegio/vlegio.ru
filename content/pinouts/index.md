@@ -4,7 +4,7 @@ date: 2022-11-05T12:38:14+03:00
 # weight: 1
 # aliases: ["/first"]
 categories: ["Hobby", "Hardware"]
-tags: ["pinouts", "hardware", "3dprint"]
+tags: ["pinouts", "hardware", "3d-print"]
 type: "post"
 author: "VLegio"
 description: ""

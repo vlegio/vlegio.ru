@@ -3,8 +3,8 @@ title: "Pinouts"
 date: 2022-11-05T12:38:14+03:00
 # weight: 1
 # aliases: ["/first"]
-categories: "Work"
-tags: ["first"]
+categories: ["Hobby", "Hardware"]
+tags: ["pinouts", "hardware", "3dprint"]
 type: "post"
 author: "VLegio"
 description: ""

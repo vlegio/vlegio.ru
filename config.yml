@@ -1,3 +1,5 @@
+---
+baseURL: "https://vlegio.ru"
 theme: "simple-style"
 title: "Ivan Anfilatov aka VLegio"
 copyright: "Ivan (VLegio) Anfilatov / Commit: @@@COMMIT@@@"
